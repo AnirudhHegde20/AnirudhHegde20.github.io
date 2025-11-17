@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Anirudh Hegde</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <nav>
+      <div class="brand">Anirudh Hegde</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="section">
+        <h2>Projects</h2>
+        <p class="lead">A selection of analytics, BI, and ML work.</p>
+        <!-- you can copy the card grid from index and expand it here -->
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Anirudh Hegde</div>
+      <div>
+        <a href="mailto:anirudh.hegde07@gmail.com">Email</a> ·
+        <a href="https://www.linkedin.com/in/anirudhhegde1997" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/AnirudhHegde20" target="_blank">GitHub</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
