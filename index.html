@@ -11,813 +11,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <style>
-    :root {
-      --bg: #050816;
-      --bg-alt: #0a1022;
-      --card: #111827;
-      --accent-pink: #ec4899;
-      --accent-blue: #22d3ee;
-      --accent-green: #22c55e;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border-subtle: rgba(148, 163, 184, 0.3);
-      --radius-lg: 18px;
-      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.55);
-      --max-width: 1100px;
-      --transition-fast: 0.2s ease-out;
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-      color: var(--text-main);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* Layout helpers */
-
-    .page {
-      min-height: 100vh;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    section {
-      padding: 4.5rem 0 3.5rem;
-      position: relative;
-    }
-
-    .section-header {
-      margin-bottom: 2.5rem;
-    }
-
-    .section-title {
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      color: #38bdf8;
-    }
-
-    .section-underline {
-      width: 64px;
-      height: 3px;
-      margin-top: 0.5rem;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #f97316, #ec4899, #22d3ee);
-    }
-
-    /* Navbar */
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(51, 65, 85, 0.7);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      font-size: 1rem;
-      color: #e5e7eb;
-    }
-
-    .logo span {
-      background: linear-gradient(90deg, #22d3ee, #a855f7, #f97316);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.4rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      position: relative;
-      padding-bottom: 2px;
-      transition: color var(--transition-fast);
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #22d3ee, #ec4899);
-      transition: width var(--transition-fast);
-    }
-
-    .nav-links a:hover {
-      color: #f9fafb;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Mobile nav */
-
-    .nav-toggle {
-      display: none;
-      border: none;
-      background: transparent;
-      color: #e5e7eb;
-      font-size: 1.4rem;
-      cursor: pointer;
-    }
-
-    .nav-toggle:focus-visible {
-      outline: 2px solid #22d3ee;
-      outline-offset: 3px;
-    }
-
-    .nav-links-mobile {
-      display: none;
-      flex-direction: column;
-      gap: 0.75rem;
-      padding: 0.75rem 0 1rem;
-      border-top: 1px solid rgba(51, 65, 85, 0.7);
-    }
-
-    .nav-links-mobile a {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    /* Hero */
-
-    .hero {
-      padding: 3.5rem 0 4rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .hero-title {
-      font-size: clamp(2.6rem, 4vw, 3.4rem);
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      background: linear-gradient(90deg, #22d3ee, #a855f7, #f97316, #facc15);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: #e5e7eb;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .hero-subtitle span {
-      color: #a5b4fc;
-    }
-
-    .opt-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      background: rgba(22, 163, 74, 0.14);
-      border: 1px solid rgba(34, 197, 94, 0.5);
-      color: #bbf7d0;
-      font-size: 0.8rem;
-      margin-bottom: 1.3rem;
-    }
-
-    .opt-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: radial-gradient(circle, #bbf7d0 0, #22c55e 45%, #14532d 100%);
-      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.5rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-meta-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .hero-meta-item span.icon {
-      font-size: 1rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .btn {
-      border-radius: 999px;
-      border: 1px solid transparent;
-      padding: 0.65rem 1.2rem;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      cursor: pointer;
-      background: transparent;
-      color: var(--text-main);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border var(--transition-fast), color var(--transition-fast);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #22c55e, #22d3ee);
-      color: #0b1020;
-      box-shadow: 0 16px 30px rgba(34, 211, 238, 0.4);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 40px rgba(34, 211, 238, 0.55);
-    }
-
-    .btn-secondary {
-      border-color: rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .btn-secondary:hover {
-      border-color: #22d3ee;
-      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.7);
-      transform: translateY(-1px);
-    }
-
-    .btn-resume {
-      background: linear-gradient(135deg, #ec4899, #f97316);
-      color: #0f172a;
-      box-shadow: 0 16px 30px rgba(248, 113, 113, 0.5);
-    }
-
-    .btn-resume:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 40px rgba(248, 113, 113, 0.7);
-    }
-
-    .btn span.icon-arrow {
-      font-size: 1.1rem;
-    }
-
-    /* About */
-
-    .about-text {
-      max-width: 720px;
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .about-metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.25rem;
-      margin-top: 2.5rem;
-    }
-
-    .metric-card {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.05), rgba(15, 23, 42, 0.95));
-      border-radius: var(--radius-lg);
-      padding: 1.3rem 1.4rem;
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-      transform: translateY(0);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
-    }
-
-    .metric-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 60%);
-      opacity: 0;
-      transition: opacity var(--transition-fast);
-      z-index: -1;
-    }
-
-    .metric-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(96, 165, 250, 0.9);
-      box-shadow: 0 28px 60px rgba(15, 23, 42, 0.85);
-    }
-
-    .metric-card:hover::before {
-      opacity: 1;
-    }
-
-    .metric-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .metric-label {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .metric-tag {
-      margin-top: 0.4rem;
-      font-size: 0.8rem;
-      color: #a5b4fc;
-    }
-
-    /* Skills */
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.3rem;
-    }
-
-    .skill-block {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: var(--radius-lg);
-      padding: 1.3rem 1.4rem 1.2rem;
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.7);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-heading {
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      font-size: 1rem;
-    }
-
-    .skill-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-
-    .chip {
-      font-size: 0.78rem;
-      padding: 0.28rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-muted);
-      background: rgba(15, 23, 42, 0.9);
-      white-space: nowrap;
-    }
-
-    /* Case studies */
-
-    .case-filter {
-      display: inline-flex;
-      border-radius: 999px;
-      padding: 0.2rem;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.9);
-      margin-bottom: 1.5rem;
-    }
-
-    .case-pill {
-      font-size: 0.8rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: background var(--transition-fast), color var(--transition-fast);
-    }
-
-    .case-pill.active {
-      background: linear-gradient(135deg, #ec4899, #22d3ee);
-      color: #020617;
-    }
-
-    .case-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .case-card {
-      border-radius: var(--radius-lg);
-      padding: 1.4rem 1.4rem 1.3rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      box-shadow: var(--shadow-soft);
-      background: radial-gradient(circle at top left, rgba(244, 114, 182, 0.08), rgba(15, 23, 42, 0.96));
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .case-card[data-type="data-eng"] {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), rgba(15, 23, 42, 0.96));
-    }
-
-    .case-card[data-type="ml"] {
-      background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.09), rgba(15, 23, 42, 0.96));
-    }
-
-    .case-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 28px 55px rgba(15, 23, 42, 0.9);
-      border-color: rgba(248, 113, 113, 0.9);
-    }
-
-    .case-tag {
-      font-size: 0.72rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
-      width: fit-content;
-    }
-
-    .case-title {
-      font-size: 1.02rem;
-      font-weight: 600;
-    }
-
-    .case-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.2rem;
-    }
-
-    .case-text {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .case-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-      font-size: 0.78rem;
-      margin-top: 0.4rem;
-    }
-
-    .case-metric {
-      padding: 0.5rem 0.65rem;
-      border-radius: 0.95rem;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.8);
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
-
-    .case-metric-label {
-      color: var(--text-muted);
-      font-size: 0.73rem;
-    }
-
-    .case-metric-value {
-      font-weight: 600;
-      font-size: 0.83rem;
-    }
-
-    .case-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 0.7rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .case-links {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .case-link {
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      padding: 0.25rem 0.65rem;
-      font-size: 0.75rem;
-      cursor: pointer;
-      background: rgba(15, 23, 42, 0.95);
-      transition: border-color var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
-    }
-
-    .case-link:hover {
-      border-color: #22d3ee;
-      transform: translateY(-1px);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    /* Experience */
-
-    .exp-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .exp-card {
-      border-radius: 1.1rem;
-      padding: 1.4rem 1.5rem;
-      background: linear-gradient(135deg, rgba(248, 113, 113, 0.1), rgba(15, 23, 42, 0.97));
-      border: 1px solid rgba(248, 113, 113, 0.7);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .exp-role {
-      font-weight: 600;
-      font-size: 1.02rem;
-    }
-
-    .exp-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.1rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .exp-list {
-      margin: 0.2rem 0 0;
-      padding-left: 1.1rem;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .exp-list li {
-      margin-bottom: 0.25rem;
-    }
-
-    .exp-card:nth-child(2) {
-      background: linear-gradient(135deg, rgba(248, 250, 252, 0.02), rgba(15, 23, 42, 0.98));
-      border-color: rgba(251, 191, 36, 0.7);
-    }
-
-    .exp-card:nth-child(3) {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.09), rgba(15, 23, 42, 0.98));
-      border-color: rgba(59, 130, 246, 0.8);
-    }
-
-    /* Education */
-
-    .edu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .edu-card {
-      border-radius: 1rem;
-      padding: 1.1rem 1.3rem;
-      background: rgba(15, 23, 42, 0.93);
-      border: 1px solid rgba(34, 197, 94, 0.7);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .edu-card:nth-child(2) {
-      border-color: rgba(52, 211, 153, 0.7);
-    }
-
-    .edu-title {
-      font-weight: 600;
-      font-size: 0.99rem;
-    }
-
-    .edu-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.1rem;
-    }
-
-    .edu-detail {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-    }
-
-    /* Contact */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr);
-      gap: 2rem;
-    }
-
-    .contact-card {
-      border-radius: var(--radius-lg);
-      padding: 1.5rem 1.6rem 1.6rem;
-      background: radial-gradient(circle at top left, rgba(236, 72, 153, 0.1), rgba(15, 23, 42, 0.97));
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .contact-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 1.3rem;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-      margin-bottom: 0.9rem;
-      font-size: 0.85rem;
-    }
-
-    .field label {
-      color: var(--text-muted);
-    }
-
-    .field input,
-    .field textarea {
-      border-radius: 0.8rem;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.95);
-      padding: 0.65rem 0.8rem;
-      font-size: 0.86rem;
-      color: var(--text-main);
-      font-family: inherit;
-      resize: vertical;
-      min-height: 42px;
-    }
-
-    .field input:focus,
-    .field textarea:focus {
-      outline: none;
-      border-color: #22d3ee;
-      box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.6);
-    }
-
-    .contact-footer {
-      margin-top: 1.1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 0.9rem;
-    }
-
-    .social-links a {
-      font-size: 0.9rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.95);
-      transition: border-color var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
-    }
-
-    .social-links a:hover {
-      border-color: #22d3ee;
-      transform: translateY(-1px);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    /* Footer */
-
-    footer {
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      padding: 1.2rem 0;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-align: center;
-      background: #020617;
-    }
-
-    /* Scroll reveal base */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Responsive */
-
-    @media (max-width: 768px) {
-      .hero {
-        padding-top: 2.4rem;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-
-      .nav-links-mobile.open {
-        display: flex;
-      }
-
-      section {
-        padding-top: 3.2rem;
-        padding-bottom: 2.8rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .case-metrics {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-meta {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .section-title {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
   <div class="page">
     <!-- Navbar -->
     <header class="navbar">
       <div class="container nav-inner">
-        <div class="logo">AH<span>.</span></div>
+        <a class="logo" href="#hero" aria-label="Go to top">AH<span>.</span></a>
 
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#case-studies">Projects</a>
@@ -830,7 +36,8 @@
           ☰
         </button>
       </div>
-      <div class="container nav-links-mobile" id="navMobile">
+
+      <div class="container nav-links-mobile" id="navMobile" aria-label="Mobile navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#case-studies">Projects</a>
@@ -840,8 +47,8 @@
       </div>
     </header>
 
-    <!-- Hero -->
     <main>
+      <!-- Hero -->
       <section id="hero" class="hero">
         <div class="container hero-grid">
           <div class="reveal">
@@ -856,49 +63,58 @@
             </div>
 
             <div class="hero-meta">
+              <div class="hero-meta-item"><span class="icon">📍</span> Boston, MA</div>
               <div class="hero-meta-item">
-                <span class="icon">📍</span> Boston, MA
+                <span class="icon">📧</span>
+                <a href="mailto:anirudh.hegde07@gmail.com">anirudh.hegde07@gmail.com</a>
               </div>
               <div class="hero-meta-item">
-                <span class="icon">📧</span> <a href="mailto:anirudh.hegde07@gmail.com">anirudh.hegde07@gmail.com</a>
-              </div>
-              <div class="hero-meta-item">
-                <span class="icon">📱</span> <a href="tel:+18574924515">+1&nbsp;857&nbsp;492&nbsp;4515</a>
+                <span class="icon">📱</span>
+                <a href="tel:+18574924515">+1&nbsp;857&nbsp;492&nbsp;4515</a>
               </div>
             </div>
 
             <div class="hero-actions">
               <a
                 href="https://www.linkedin.com/in/anirudhhegde1997/"
-                target="_blank"
-                rel="noopener"
+                target="_blank" rel="noopener"
                 class="btn btn-primary"
               >
-                <span class="icon">🔗</span>
-                LinkedIn
+                <span class="icon">🔗</span> LinkedIn
               </a>
 
               <a
                 href="https://github.com/AnirudhHegde20"
-                target="_blank"
-                rel="noopener"
+                target="_blank" rel="noopener"
                 class="btn btn-secondary"
               >
-                <span class="icon">💻</span>
-                GitHub
+                <span class="icon">💻</span> GitHub
               </a>
 
               <a
-                href="AnirudhHegde_Resume.pdf"
-                target="_blank"
-                rel="noopener"
+                href="./AnirudhHegde_Resume.pdf"
+                target="_blank" rel="noopener"
                 class="btn btn-resume"
               >
-                <span class="icon">📄</span>
-                View Resume
-                <span class="icon-arrow">↗</span>
+                <span class="icon">📄</span> View Resume <span class="icon-arrow">↗</span>
               </a>
             </div>
+
+            <div class="hero-mini reveal" style="margin-top: 1.2rem;">
+              <div class="mini-card">
+                <div class="mini-title">What I do</div>
+                <div class="mini-text">
+                  I turn messy business data into <b>KPIs, dashboards, and models</b> that drive better decisions.
+                </div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-title">What I’m targeting</div>
+                <div class="mini-text">
+                  BI Analyst • Data Analyst • Analytics Engineer (and DS-style roles where analytics + ML matter)
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -910,22 +126,22 @@
             <h2 class="section-title">About Me</h2>
             <div class="section-underline"></div>
           </div>
+
           <div class="about-text reveal">
-            Data Analyst with 4+ years delivering business intelligence and data-driven insights through
-            SQL, Python, Tableau, and Power BI. I build reporting systems, dashboards, and analytical
-            models that help business leaders make faster, smarter decisions across sales, marketing, and
-            operations.
+            Data Analyst with 4+ years delivering business intelligence and data-driven insights through SQL, Python,
+            Tableau, and Power BI. I build reporting systems, dashboards, and analytical models that help business
+            leaders make faster, smarter decisions across sales, marketing, and operations.
             <br /><br />
-            My recent work ranges from building forecasting models on 600K+ transactions and powering
-            $1M in revenue gains, to reducing manual portfolio reporting from 4 hours to 15 minutes and
-            designing churn engines that protect seven-figure revenue at risk.
+            My recent work ranges from building forecasting models on 600K+ transactions and powering $1M in revenue
+            gains, to reducing manual reporting effort and designing churn/segmentation engines that protect and grow
+            revenue.
           </div>
 
           <div class="about-metrics">
             <article class="metric-card reveal">
               <div class="metric-value">4+ Years</div>
               <div class="metric-label">Professional Experience</div>
-              <div class="metric-tag">Across automotive, manufacturing, and analytics domains</div>
+              <div class="metric-tag">Automotive • Manufacturing • Analytics</div>
             </article>
             <article class="metric-card reveal">
               <div class="metric-value">12 pp</div>
@@ -1016,7 +232,7 @@
         </div>
       </section>
 
-      <!-- Case Studies / Projects -->
+      <!-- Projects / Case Studies -->
       <section id="case-studies">
         <div class="container">
           <div class="section-header reveal">
@@ -1024,124 +240,127 @@
             <div class="section-underline"></div>
           </div>
 
-          <div class="case-filter reveal">
-            <button class="case-pill active" data-filter="all">All</button>
-            <button class="case-pill" data-filter="analytics">Analytics</button>
-            <button class="case-pill" data-filter="data-eng">Data Engineering</button>
-            <button class="case-pill" data-filter="ml">ML / AI</button>
+          <div class="project-toolbar reveal">
+            <div class="case-filter" role="tablist" aria-label="Project filters">
+              <button class="case-pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+              <button class="case-pill" data-filter="analytics" role="tab">Analytics</button>
+              <button class="case-pill" data-filter="data-eng" role="tab">Customer Strategy</button>
+              <button class="case-pill" data-filter="ml" role="tab">ML / AI</button>
+            </div>
+
+            <div class="search-wrap">
+              <input id="projectSearch" type="search" placeholder="Search projects (e.g., A/B, churn, RFM)..." />
+              <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+            </div>
           </div>
 
-          <div class="case-grid">
-            <!-- E-commerce Conversion -->
-            <article class="case-card reveal" data-type="analytics">
+          <div class="case-grid" id="caseGrid">
+            <!-- 1) E-commerce Conversion -->
+            <article class="case-card reveal" data-type="analytics" data-search="ecommerce conversion ab testing chi square fisher power analysis uplift">
               <span class="case-tag">Analytics</span>
               <div>
-                <div class="case-label">Challenge</div>
-                <h3 class="case-title">E-commerce Conversion Optimization</h3>
+                <div class="case-label">Business Problem</div>
+                <h3 class="case-title">E-commerce Conversion Lift via A/B Testing</h3>
                 <p class="case-text">
-                  Evaluated whether a product page redesign should be rolled out globally by quantifying
-                  the impact on conversion across regions and device segments without risking full-scale
-                  revenue loss.
+                  Decide whether a product page redesign should ship by measuring conversion impact across device/region
+                  segments without risking revenue with a full rollout.
                 </p>
               </div>
               <div>
-                <div class="case-label">Solution</div>
+                <div class="case-label">What I built</div>
                 <p class="case-text">
-                  Ran A/B tests on 2K+ user interactions using Chi-square, Fisher’s Exact tests, and power
-                  analysis. Built Plotly visualizations and recommended a selective rollout based on
-                  segment-level uplift.
+                  An experimentation workflow with significance testing + power checks, plus clear visuals and
+                  segment-level recommendations for rollout decisions.
                 </p>
               </div>
               <div class="case-metrics">
                 <div class="case-metric">
-                  <span class="case-metric-label">Annual Revenue Impact</span>
+                  <span class="case-metric-label">Outcome</span>
                   <span class="case-metric-value">$500K+ projected lift</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Conversion Uplift</span>
+                  <span class="case-metric-label">Uplift</span>
                   <span class="case-metric-value">+18.4% (Europe - Tablet)</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Significance</span>
-                  <span class="case-metric-value">p = 0.015</span>
+                  <span class="case-metric-label">Stats</span>
+                  <span class="case-metric-value">Chi-square, Fisher’s, Power</span>
                 </div>
                 <div class="case-metric">
                   <span class="case-metric-label">Tech</span>
-                  <span class="case-metric-value">Python, Pandas, Plotly, Stats Tests</span>
+                  <span class="case-metric-value">Python, Pandas, Plotly</span>
                 </div>
               </div>
               <div class="case-footer">
-                <div>Experiment design • A/B testing • Segmentation</div>
+                <div>Experimentation • Decisioning • Segmentation</div>
                 <div class="case-links">
-                  <a href="#" class="case-link">Case Study</a>
-                  <a href="#" class="case-link">GitHub</a>
+                  <a href="./case-studies/ecommerce-conversion.html" class="case-link">Case Study</a>
+                  <a href="https://github.com/AnirudhHegde20/Improving-Conversion-on-an-E-commerce-Product-Page/tree/main" target="_blank" rel="noopener" class="case-link">GitHub</a>
                 </div>
               </div>
             </article>
 
-            <!-- FinSight -->
-            <article class="case-card reveal" data-type="data-eng">
-              <span class="case-tag">Data Engineering</span>
+            <!-- 2) Customer Value Intelligence -->
+            <article class="case-card reveal" data-type="data-eng" data-search="customer value intelligence clv rfm segmentation kmeans targeting retention">
+              <span class="case-tag">Customer Strategy</span>
               <div>
-                <div class="case-label">Challenge</div>
-                <h3 class="case-title">FinSight Nexus – Financial Portfolio Analytics</h3>
+                <div class="case-label">Business Problem</div>
+                <h3 class="case-title">Customer Value Intelligence System (CLV + RFM Segmentation)</h3>
                 <p class="case-text">
-                  Manual portfolio monitoring was slow and error-prone, delaying risk-return decisions for
-                  investment teams across multiple products and accounts.
+                  Help marketing prioritize who to retain, reactivate, and upsell by turning raw transactions into
+                  customer segments and targeting actions.
                 </p>
               </div>
               <div>
-                <div class="case-label">Solution</div>
+                <div class="case-label">What I built</div>
                 <p class="case-text">
-                  Designed an end-to-end Azure analytics pipeline with Data Factory for ingestion,
-                  Databricks (PySpark) for transformation, and Synapse Analytics for SCD Type-2 modeling.
-                  Built Power BI dashboards for real-time portfolio KPIs.
+                  A customer value engine using RFM scoring + clustering to create segments, KPI views,
+                  and a clear targeting playbook.
                 </p>
               </div>
               <div class="case-metrics">
                 <div class="case-metric">
-                  <span class="case-metric-label">Manual Effort</span>
-                  <span class="case-metric-value">Reduced from 4h → 15 min</span>
+                  <span class="case-metric-label">Outcome</span>
+                  <span class="case-metric-value">Segments + targeting playbook</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Pipeline</span>
-                  <span class="case-metric-value">Automated nightly refresh</span>
+                  <span class="case-metric-label">Method</span>
+                  <span class="case-metric-value">RFM + Clustering</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Stack</span>
-                  <span class="case-metric-value">ADF, Databricks, Synapse, Power BI</span>
+                  <span class="case-metric-label">Deliverables</span>
+                  <span class="case-metric-value">KPIs, segments, actions</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Focus</span>
-                  <span class="case-metric-value">Risk-return & performance tracking</span>
+                  <span class="case-metric-label">Tech</span>
+                  <span class="case-metric-value">SQL, Python, Scikit-learn</span>
                 </div>
               </div>
               <div class="case-footer">
-                <div>Cloud analytics • ETL • Data modeling</div>
+                <div>Segmentation • CLV thinking • Growth targeting</div>
                 <div class="case-links">
-                  <a href="#" class="case-link">Case Study</a>
-                  <a href="#" class="case-link">GitHub</a>
+                  <a href="./case-studies/customer-value-intelligence.html" class="case-link">Case Study</a>
+                  <a href="https://github.com/AnirudhHegde20/Customer-Value-Intelligence-System" target="_blank" rel="noopener" class="case-link">GitHub</a>
                 </div>
               </div>
             </article>
 
-            <!-- Churn Engine -->
-            <article class="case-card reveal" data-type="ml">
+            <!-- 3) Telco Churn -->
+            <article class="case-card reveal" data-type="ml" data-search="telco churn xgboost random forest shap smote retention classification">
               <span class="case-tag">ML / AI</span>
               <div>
-                <div class="case-label">Challenge</div>
-                <h3 class="case-title">Customer Churn Prediction Engine</h3>
+                <div class="case-label">Business Problem</div>
+                <h3 class="case-title">Telco Churn Early-Warning + Retention Targeting</h3>
                 <p class="case-text">
-                  Subscription-based telecom business needed an early-warning system to flag high-risk
-                  customers and support targeted retention campaigns.
+                  Reduce revenue leakage by predicting churn risk early and explaining the key drivers
+                  so teams can act with confidence.
                 </p>
               </div>
               <div>
-                <div class="case-label">Solution</div>
+                <div class="case-label">What I built</div>
                 <p class="case-text">
-                  Trained ensemble models on 7K+ customer records using XGBoost and Random Forest with
-                  SMOTE for class balance. Used SHAP to explain churn drivers and built a Tableau dashboard
-                  for marketing teams.
+                  A churn prediction pipeline with class balancing, strong baseline modeling,
+                  and explainability for “why this customer will churn”.
                 </p>
               </div>
               <div class="case-metrics">
@@ -1150,23 +369,23 @@
                   <span class="case-metric-value">87%</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Early Warning Window</span>
+                  <span class="case-metric-label">Early Window</span>
                   <span class="case-metric-value">30 days before churn</span>
                 </div>
                 <div class="case-metric">
-                  <span class="case-metric-label">Key Drivers</span>
-                  <span class="case-metric-value">Contract type, tenure, charges</span>
+                  <span class="case-metric-label">Explainability</span>
+                  <span class="case-metric-value">SHAP driver insights</span>
                 </div>
                 <div class="case-metric">
                   <span class="case-metric-label">Tech</span>
-                  <span class="case-metric-value">Python, XGBoost, SHAP, Tableau</span>
+                  <span class="case-metric-value">Python, XGBoost, Tableau</span>
                 </div>
               </div>
               <div class="case-footer">
-                <div>Predictive modeling • Explainable AI • Retention</div>
+                <div>Predictive risk • Explainable ML • Retention</div>
                 <div class="case-links">
-                  <a href="#" class="case-link">Case Study</a>
-                  <a href="#" class="case-link">GitHub</a>
+                  <a href="./case-studies/telco-churn.html" class="case-link">Case Study</a>
+                  <a href="https://github.com/AnirudhHegde20/Telco-Customer-Churn" target="_blank" rel="noopener" class="case-link">GitHub</a>
                 </div>
               </div>
             </article>
@@ -1185,62 +404,30 @@
           <div class="exp-timeline">
             <article class="exp-card reveal">
               <div class="exp-role">Assistant Manager (Data Analyst)</div>
-              <div class="exp-meta">
-                Maruti Suzuki India Limited • Gurugram, India • Jun 2022 – Jul 2023
-              </div>
+              <div class="exp-meta">Maruti Suzuki India Limited • Gurugram, India • Jun 2022 – Jul 2023</div>
               <ul class="exp-list">
-                <li>
-                  Built SQL and Python forecasting models on 600K+ transactions across 12 segments,
-                  improving accuracy by 12 percentage points and unlocking ~$1M in revenue gains.
-                </li>
-                <li>
-                  Automated an A/B testing framework using Chi-square, t-tests, and power analysis for
-                  15+ campaigns, cutting analysis time by 40% and lifting campaign ROI by 8%.
-                </li>
-                <li>
-                  Led competitive market analysis in Power BI across sales and market-share data,
-                  identifying 3 product expansion opportunities worth $2M+ and presenting to C-suite.
-                </li>
+                <li>Built SQL + Python forecasting models on 600K+ transactions across 12 segments, improving accuracy by 12 pp and unlocking ~$1M in revenue gains.</li>
+                <li>Automated an A/B testing framework for 15+ campaigns, cutting analysis time by 40% and lifting campaign ROI by 8%.</li>
+                <li>Led competitive market analysis in Power BI, identifying product expansion opportunities worth $2M+ and presenting to leadership.</li>
               </ul>
             </article>
 
             <article class="exp-card reveal">
               <div class="exp-role">Assistant Manager (Business Analyst)</div>
-              <div class="exp-meta">
-                Godrej &amp; Boyce Mfg Co Ltd • New Delhi, India • Jan 2021 – Jun 2022
-              </div>
+              <div class="exp-meta">Godrej &amp; Boyce Mfg Co Ltd • New Delhi, India • Jan 2021 – Jun 2022</div>
               <ul class="exp-list">
-                <li>
-                  Performed RFM-based segmentation on 100K+ customers using SQL and Python K-Means,
-                  improving campaign ROI by 25% and increasing repeat purchases by 12%.
-                </li>
-                <li>
-                  Developed a 30-day churn prediction model and Power BI dashboards that enabled
-                  proactive retention campaigns, reducing quarterly churn by 5% and protecting $1.2M
-                  annual revenue.
-                </li>
-                <li>
-                  Automated ETL workflows and KPI reporting for weekly sales and marketing data,
-                  cutting manual reporting effort by 75% and giving leadership clearer visibility into
-                  performance.
-                </li>
+                <li>Performed RFM segmentation on 100K+ customers using SQL + Python clustering, improving campaign ROI by 25% and increasing repeat purchases by 12%.</li>
+                <li>Developed a churn prediction model + dashboards enabling proactive retention, reducing churn by 5% and protecting $1.2M annual revenue.</li>
+                <li>Automated ETL and KPI reporting, cutting manual reporting effort by 75% and improving visibility into performance.</li>
               </ul>
             </article>
 
             <article class="exp-card reveal">
               <div class="exp-role">Data Analyst</div>
-              <div class="exp-meta">
-                AG Electrochem • Gurugram, India • May 2019 – Jan 2021
-              </div>
+              <div class="exp-meta">AG Electrochem • Gurugram, India • May 2019 – Jan 2021</div>
               <ul class="exp-list">
-                <li>
-                  Built Tableau dashboards querying SQL databases to track sales performance across 25+
-                  SKUs, reducing weekly reporting time by 75% (8h → 2h).
-                </li>
-                <li>
-                  Implemented Python-based data validation and quality checks, improving data accuracy by
-                  40% and reducing manual rework for sales and operations teams.
-                </li>
+                <li>Built Tableau dashboards on SQL data to track sales performance across 25+ SKUs, reducing weekly reporting time by 75%.</li>
+                <li>Implemented Python data validation checks, improving data accuracy by 40% and reducing manual rework.</li>
               </ul>
             </article>
           </div>
@@ -1257,28 +444,18 @@
 
           <div class="edu-list">
             <article class="edu-card reveal">
-              <div class="edu-title">
-                Masters of Science in Data Analytics Engineering
-              </div>
-              <div class="edu-meta">
-                Northeastern University • Boston, Massachusetts • May 2025
-              </div>
+              <div class="edu-title">Masters of Science in Data Analytics Engineering</div>
+              <div class="edu-meta">Northeastern University • Boston, Massachusetts • May 2025</div>
               <div class="edu-detail">
-                GPA: 3.92 • Coursework: MLOps, NLP, Data Mining, Intro to Computational Statistics,
-                Data Management for Analytics
+                GPA: 3.92 • Coursework: MLOps, NLP, Data Mining, Intro to Computational Statistics, Data Management for Analytics
               </div>
             </article>
 
             <article class="edu-card reveal">
-              <div class="edu-title">
-                Bachelor of Technology in Mechanical and Automation
-              </div>
-              <div class="edu-meta">
-                Guru Gobind Singh Indraprastha University • New Delhi, India • Sept 2020
-              </div>
+              <div class="edu-title">Bachelor of Technology in Mechanical and Automation</div>
+              <div class="edu-meta">Guru Gobind Singh Indraprastha University • New Delhi, India • Sept 2020</div>
               <div class="edu-detail">
-                Coursework: Operations Research, Optimization Techniques, Numerical Analysis and
-                Statistical Techniques
+                Coursework: Operations Research, Optimization, Numerical Analysis, Statistical Techniques
               </div>
             </article>
           </div>
@@ -1296,11 +473,11 @@
           <div class="contact-grid">
             <article class="contact-card reveal">
               <p class="contact-subtitle">
-                Interested in collaborating, hiring for a data role, or just want to talk through an
-                analytics problem? Drop a note here or reach out on LinkedIn.
+                Interested in collaborating, hiring for a data role, or just want to talk through an analytics problem?
+                Drop a note here or reach out on LinkedIn.
               </p>
 
-              <!-- For GitHub Pages, this can mailto; replace with Formspree / other if you want real backend -->
+              <!-- Mailto works on GitHub Pages (no backend). -->
               <form action="mailto:anirudh.hegde07@gmail.com" method="POST" enctype="text/plain">
                 <div class="field">
                   <label for="name">Name</label>
@@ -1312,12 +489,7 @@
                 </div>
                 <div class="field">
                   <label for="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    placeholder="Tell me a bit about what you’re looking for…"
-                  ></textarea>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about what you’re looking for…"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">
                   <span>Send Message</span>
@@ -1329,12 +501,8 @@
                 <div>Prefer direct contact?</div>
                 <div class="social-links">
                   <a href="mailto:anirudh.hegde07@gmail.com">Email</a>
-                  <a href="hhttps://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener">
-                    LinkedIn
-                  </a>
-                  <a href="https://github.com/AnirudhHegde20" target="_blank" rel="noopener">
-                    GitHub
-                  </a>
+                  <a href="https://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="https://github.com/AnirudhHegde20" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
             </article>
@@ -1350,53 +518,6 @@
     </footer>
   </div>
 
-  <script>
-    // Mobile nav toggle
-    const navToggle = document.getElementById("navToggle");
-    const navMobile = document.getElementById("navMobile");
-    navToggle.addEventListener("click", () => {
-      navMobile.classList.toggle("open");
-    });
-    navMobile.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => navMobile.classList.remove("open"));
-    });
-
-    // Case study filter
-    const pills = document.querySelectorAll(".case-pill");
-    const cards = document.querySelectorAll(".case-card");
-
-    pills.forEach((pill) => {
-      pill.addEventListener("click", () => {
-        const filter = pill.dataset.filter;
-        pills.forEach((p) => p.classList.remove("active"));
-        pill.classList.add("active");
-        cards.forEach((card) => {
-          if (filter === "all" || card.dataset.type === filter) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      });
-    });
-
-    // Scroll reveal
-    const revealEls = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.18 }
-    );
-    revealEls.forEach((el) => observer.observe(el));
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="./assets/app.js"></script>
 </body>
 </html>

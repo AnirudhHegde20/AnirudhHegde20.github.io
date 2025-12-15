@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Case Study | Telco Churn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <div class="logo">AH<span>.</span></div>
+        <nav class="nav-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#case-studies">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+      </div>
+      <div class="container nav-links-mobile" id="navMobile">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#case-studies">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <div class="breadcrumb reveal">
+            <a href="../index.html#case-studies">← Back to Projects</a>
+          </div>
+
+          <h1 class="page-title reveal">Telco Churn Early-Warning + Retention Targeting</h1>
+          <p class="page-subtitle reveal">
+            A churn prediction workflow built to flag churn risk early, explain why customers churn, and support retention decisions.
+          </p>
+
+          <div class="quick-links reveal">
+            <a
+              class="case-link"
+              href="https://github.com/AnirudhHegde20/Telco-Customer-Churn"
+              target="_blank"
+              rel="noopener"
+              >GitHub Repo</a
+            >
+            <a class="case-link" href="../index.html#contact">Contact</a>
+          </div>
+
+          <div class="callout reveal">
+            Business goal: reduce churn by prioritizing intervention for customers most likely to leave and most valuable to retain.
+          </div>
+
+          <div class="content-grid">
+            <article class="content-card reveal">
+              <h3>Problem</h3>
+              <p>
+                Churn reduces recurring revenue. Teams needed a reliable early-warning signal and clarity on what drives churn.
+              </p>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Approach</h3>
+              <ul>
+                <li>Data prep + feature engineering</li>
+                <li>Train/validate churn models (e.g., tree ensembles)</li>
+                <li>Explain drivers (why churn happens)</li>
+                <li>Translate insights into retention actions</li>
+              </ul>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Results (high-level)</h3>
+              <ul>
+                <li>Accuracy target achieved (~87%)</li>
+                <li>Top drivers surfaced (contract, tenure, charges)</li>
+                <li>Designed for practical retention targeting</li>
+              </ul>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Tech Stack</h3>
+              <ul>
+                <li>Python, scikit-learn / XGBoost</li>
+                <li>Explainability (SHAP-style insights)</li>
+                <li>Dashboard-friendly outputs</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© <span id="year"></span> Anirudh Hegde</div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
