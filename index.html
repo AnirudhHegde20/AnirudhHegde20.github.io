@@ -249,11 +249,14 @@
               <button class="case-pill" data-filter="ml" role="tab">ML / AI</button>
             </div>
 
-            <!-- <div class="search-wrap">
+            <!-- Search removed for now -->
+            <!--
+            <div class="search-wrap">
               <input id="projectSearch" type="search" placeholder="Search projects (e.g., A/B, churn, RFM)..." />
               <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
             </div>
-          </div> -->
+            -->
+          </div>
 
           <div class="case-grid" id="caseGrid">
             <!-- 1) E-commerce Conversion -->
@@ -478,25 +481,36 @@
                 Drop a note here or reach out on LinkedIn.
               </p>
 
-              <!-- Mailto works on GitHub Pages (no backend). -->
-              <form action="mailto:anirudh.hegde07@gmail.com" method="POST" enctype="text/plain">
+              <!-- Formspree form (no mailto) -->
+              <form
+                action="https://formspree.io/f/mkgdarln"
+                method="POST"
+                class="contact-form"
+              >
                 <div class="field">
                   <label for="name">Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your name" />
+                  <input id="name" name="name" type="text" required />
                 </div>
+
                 <div class="field">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="you@example.com" />
+                  <input id="email" name="email" type="email" required />
                 </div>
+
                 <div class="field">
                   <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about what you’re looking for…"></textarea>
+                  <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
+
                 <button type="submit" class="btn btn-primary">
-                  <span>Send Message</span>
-                  <span class="icon-arrow">✉️</span>
+                  Send Message
                 </button>
+
+                <p id="formResponse" style="display:none; margin-top:1rem; color:#22c55e;">
+                  Thanks! Your message has been sent.
+                </p>
               </form>
+
 
               <div class="contact-footer">
                 <div>Prefer direct contact?</div>
@@ -519,6 +533,31 @@
     </footer>
   </div>
 
-  <script src="./app.js"></script>
+  <script src="./app.js" defer></script>
+
+  <script>
+    const form = document.querySelector(".contact-form");
+    const msg = document.getElementById("formResponse");
+
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" }
+        });
+
+        if (res.ok) {
+          msg.style.display = "block";
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      });
+    }
+  </script>
 </body>
 </html>
