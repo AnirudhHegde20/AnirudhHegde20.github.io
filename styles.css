@@ -40,7 +40,7 @@ body {
   margin: 0;
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-main);
-  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  background: linear-gradient(180deg, #eef5ff 0%, #e6f0ff 100%);
 }
 
 a {
