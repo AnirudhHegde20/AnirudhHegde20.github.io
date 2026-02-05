@@ -1,8 +1,4 @@
-/* =========================
-   LIGHT + PROFESSIONAL THEME
-   Drop-in replacement for styles.css
-   Fixes chip truncation + cleans up colors
-   ========================= */
+body { background: #ff0000 !important; }
 
 :root {
   /* Base */
