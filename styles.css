@@ -1,30 +1,35 @@
-::root {
+/* =========================
+   LIGHT + PROFESSIONAL THEME
+   Drop-in replacement for styles.css
+   Fixes chip truncation + cleans up colors
+   ========================= */
+
+:root {
   /* Base */
-  --bg: #f6f8fc;
-  --bg-alt: rgba(255,255,255,0.72);
-  --card: rgba(255,255,255,0.92);
-  --text-main: #0b1220;
-  --text-muted: #52607a;
-  --border-subtle: rgba(15, 23, 42, 0.10);
+  --bg: #81b8ef;          /* page background */
+  --bg-alt: #ffffff;      /* section/card background */
+  --card: #ffffff;
+  --text-main: #0f172a;   /* slate-900 */
+  --text-muted: #475569;  /* slate-600 */
+  --border-subtle: rgba(15, 23, 42, 0.12);
   --radius-lg: 18px;
 
   /* Accent */
-  --accent-blue: #2563eb;
-  --accent-teal: #0891b2;
-  --accent-purple: #7c3aed;
-  --accent-green: #16a34a;
-  --accent-pink: #db2777;
-  --accent-amber: #d97706;
+  --accent-blue: #2563eb;   /* blue-600 */
+  --accent-teal: #0891b2;   /* cyan-600 */
+  --accent-purple: #7c3aed; /* violet-600 */
+  --accent-green: #16a34a;  /* green-600 */
+  --accent-pink: #db2777;   /* pink-600 */
+  --accent-amber: #d97706;  /* amber-600 */
 
   /* Layout */
   --max-width: 1100px;
 
   /* Effects */
-  --shadow-soft: 0 12px 34px rgba(15, 23, 42, 0.08);
-  --shadow-hover: 0 18px 46px rgba(15, 23, 42, 0.12);
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.10);
+  --shadow-hover: 0 16px 40px rgba(15, 23, 42, 0.14);
   --transition-fast: 0.2s ease-out;
 }
-
 
 * {
   box-sizing: border-box;
@@ -35,10 +40,7 @@ body {
   margin: 0;
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-main);
-  background: radial-gradient(900px 500px at 15% 5%, rgba(37,99,235,0.18), transparent 60%),
-            radial-gradient(800px 500px at 85% 20%, rgba(8,145,178,0.16), transparent 60%),
-            linear-gradient(180deg, #f7f9ff 0%, #eef4ff 40%, #f6f8fc 100%);
-;
+  background: linear-gradient(180deg, #eef5ff 0%, #99c0f9 100%);
 }
 
 a {
@@ -258,30 +260,6 @@ section {
   gap: 0.75rem;
 }
 
-.hero{
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-backdrop{
-  position: absolute;
-  inset: -120px -120px auto -120px;
-  height: 520px;
-  pointer-events: none;
-  background:
-    radial-gradient(360px 260px at 20% 40%, rgba(37,99,235,0.22), transparent 60%),
-    radial-gradient(320px 240px at 70% 30%, rgba(8,145,178,0.18), transparent 60%),
-    radial-gradient(320px 260px at 55% 70%, rgba(124,58,237,0.16), transparent 65%);
-  filter: blur(2px);
-  opacity: 0.9;
-  z-index: 0;
-}
-
-.hero .container{
-  position: relative;
-  z-index: 1;
-}
-
 .btn {
   border-radius: 999px;
   border: 1px solid rgba(15, 23, 42, 0.14);
@@ -424,6 +402,7 @@ section {
 .skill-block {
   background: var(--card);
   border-radius: var(--radius-lg);
+  padding: 1.3rem 1. 4rem 1.2rem;
   padding: 1.3rem 1.4rem 1.2rem;
   border: 1px solid rgba(15, 23, 42, 0.10);
   box-shadow: var(--shadow-soft);
@@ -950,3 +929,4 @@ footer {
     font-size: 1.7rem;
   }
 }
+
