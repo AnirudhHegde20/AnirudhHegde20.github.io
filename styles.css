@@ -402,7 +402,6 @@ section {
 .skill-block {
   background: var(--card);
   border-radius: var(--radius-lg);
-  padding: 1.3rem 1. 4rem 1.2rem;
   padding: 1.3rem 1.4rem 1.2rem;
   border: 1px solid rgba(15, 23, 42, 0.10);
   box-shadow: var(--shadow-soft);
@@ -929,3 +928,130 @@ footer {
     font-size: 1.7rem;
   }
 }
+
+/* 1) Tune palette for a more premium light theme */
+:root{
+  --bg: #f6f8fc;
+  --bg-alt: rgba(255,255,255,0.72);
+  --card: rgba(255,255,255,0.92);
+
+  --text-main: #0b1220;
+  --text-muted: #52607a;
+
+  --border-subtle: rgba(15, 23, 42, 0.10);
+
+  --shadow-soft: 0 12px 34px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 18px 46px rgba(15, 23, 42, 0.12);
+}
+
+/* 2) Background: subtle gradient + optional pattern layer */
+body{
+  background: radial-gradient(900px 500px at 15% 5%, rgba(37,99,235,0.18), transparent 60%),
+              radial-gradient(800px 500px at 85% 20%, rgba(8,145,178,0.16), transparent 60%),
+              linear-gradient(180deg, #f7f9ff 0%, #eef4ff 40%, #f6f8fc 100%);
+}
+
+/* Optional: ultra-subtle grid pattern (enable by uncommenting) */
+/*
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(to right, rgba(15,23,42,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,23,42,0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.18;
+}
+*/
+
+/* Optional: noise texture vibe (enable by uncommenting) */
+/*
+body::after{
+  content:"";
+  position: fixed;
+  inset:0;
+  pointer-events:none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+*/
+
+/* 3) Make sections feel like intentional “panels” */
+section{
+  position: relative;
+}
+
+section::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  z-index:-1;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.46);
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+/* Keep the panel effect only for sections inside the container */
+section .container{
+  position: relative;
+}
+
+/* Reduce panel on hero so it feels open */
+.hero::before{
+  background: transparent;
+  border: none;
+}
+
+/* 4) Typography polish */
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-title{
+  letter-spacing: -0.01em;
+}
+
+.hero-subtitle{
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* 5) Card consistency: glassy but readable */
+.metric-card,
+.skill-block,
+.case-card,
+.exp-card,
+.edu-card,
+.contact-card,
+.mini-card,
+.content-card{
+  background: var(--card);
+  border-color: rgba(15,23,42,0.10);
+}
+
+/* 6) Buttons: slightly crisper */
+.btn{
+  background: rgba(255,255,255,0.9);
+}
+
+.btn-secondary{
+  border-color: rgba(15,23,42,0.16);
+}
+
+/* 7) Chips: cleaner + more “badge-like” */
+.chip{
+  background: rgba(241,245,249,0.9);
+  border-color: rgba(15,23,42,0.12);
+  color: #0b1220;
+}
+
+/* 8) Navbar: slightly more premium */
+.navbar{
+  background: rgba(255,255,255,0.72);
+  border-bottom: 1px solid rgba(15,23,42,0.08);
+}
+
