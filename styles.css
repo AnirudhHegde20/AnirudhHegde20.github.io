@@ -121,7 +121,7 @@ section{padding:5rem 0 4rem}
 
 /* ── CASE STUDIES ── */
 #case-studies{background:var(--bg-alt)}
-.case-filter{display:inline-flex;border-radius:var(--pill);padding:.2rem;border:1px solid var(--bdr);background:var(--card-alt);margin-bottom:1.5rem;flex-wrap:wrap}
+.case-filter{display:inline-flex;border-radius:var(--pill);padding:.2rem;border:1px solid var(--bdr);background:var(--card-alt);margin-bottom:1.5rem}
 .case-pill{font-size:.8rem;font-weight:600;padding:.35rem .85rem;border-radius:var(--pill);border:none;background:transparent;color:var(--text-m);cursor:pointer;font-family:inherit;transition:all .2s var(--e)}
 .case-pill:hover{color:var(--text)}
 .case-pill.active{background:var(--ac);color:#fff}
@@ -131,6 +131,7 @@ section{padding:5rem 0 4rem}
 .case-card[data-type="analytics"]::before{background:linear-gradient(90deg,var(--amber),#fbbf24)}
 .case-card[data-type="customer"]::before{background:linear-gradient(90deg,var(--ac2),#67e8f9)}
 .case-card[data-type="ml"]::before{background:linear-gradient(90deg,var(--ac3),#c4b5fd)}
+/* ADDED: Analytics Engineering card accent color */
 .case-card[data-type="ae"]::before{background:linear-gradient(90deg,var(--emerald),#34d399)}
 .case-card:hover{transform:translateY(-4px);box-shadow:var(--sh-l);border-color:var(--bdr-h)}
 .case-card:hover::before{opacity:1}
