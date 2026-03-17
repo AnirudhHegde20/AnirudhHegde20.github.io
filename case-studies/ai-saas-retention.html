@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Case Study | AI SaaS Retention & Competitive Intelligence Platform</title>
+    <title>Case Study | AI SaaS Retention & Competitive Intelligence</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,7 @@
           </p>
 
           <div class="quick-links reveal">
-            <a
+            
               class="case-link"
               href="https://github.com/AnirudhHegde20/AI-Product-Retention-Analytics.git"
               target="_blank"
@@ -77,11 +77,8 @@
               <ul>
                 <li>Ingested 500K+ Yelp behavioral events and Product Hunt API data into PostgreSQL</li>
                 <li>Built a layered warehouse (raw to staging to marts) with dbt Core</li>
-                <li>Created retention cohort and survival input fact tables</li>
-                <li>Ran Kaplan-Meier survival analysis to measure user longevity</li>
-                <li>Trained XGBoost churn prediction model on features from dbt marts</li>
-                <li>Implemented 31 automated dbt tests for data quality</li>
-                <li>Set up GitHub Actions CI/CD to run dbt build on every push</li>
+                <li>Ran Kaplan-Meier survival analysis and trained XGBoost churn model</li>
+                <li>Implemented 31 automated dbt tests and GitHub Actions CI/CD</li>
               </ul>
             </article>
 
@@ -90,40 +87,18 @@
               <ul>
                 <li>Discovered 70% month-1 churn rate across AI products</li>
                 <li>Found an 8x survival gap between Power Users and New Users</li>
-                <li>Identified review count and review frequency as strongest retention predictors</li>
                 <li>XGBoost model achieved 0.71 AUC-ROC for churn prediction</li>
-                <li>31 automated dbt tests catch data quality issues before they reach dashboards</li>
+                <li>31 automated dbt tests catch data issues before dashboards</li>
               </ul>
             </article>
 
             <article class="content-card reveal">
               <h3>Tech Stack</h3>
               <ul>
-                <li>dbt Core (warehouse modeling, testing)</li>
-                <li>PostgreSQL (data warehouse)</li>
+                <li>dbt Core, PostgreSQL</li>
                 <li>Python, Pandas, XGBoost</li>
-                <li>Kaplan-Meier survival analysis</li>
-                <li>GitHub Actions (CI/CD pipeline)</li>
+                <li>GitHub Actions (CI/CD)</li>
                 <li>Streamlit (interactive dashboard)</li>
-              </ul>
-            </article>
-
-            <article class="content-card reveal">
-              <h3>Warehouse Architecture</h3>
-              <ul>
-                <li><strong>Raw layer:</strong> Immutable ingestion of Yelp JSON and Product Hunt API data</li>
-                <li><strong>Staging layer:</strong> Standardized transformations, type casting, deduplication</li>
-                <li><strong>Marts layer:</strong> Business-facing tables for retention cohorts, survival inputs, and competitive intelligence</li>
-              </ul>
-            </article>
-
-            <article class="content-card reveal">
-              <h3>What Makes This Different</h3>
-              <ul>
-                <li>Not just a notebook: full warehouse + CI/CD + automated testing</li>
-                <li>Dashboard reads directly from marts tables, not CSVs</li>
-                <li>dbt build runs on every push, preventing bad data from reaching downstream</li>
-                <li>Combines analytics engineering rigor with product analytics insights</li>
               </ul>
             </article>
           </div>
