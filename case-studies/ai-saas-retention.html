@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Case Study | AI SaaS Retention & Competitive Intelligence Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <div class="logo">AH<span>.</span></div>
+        <nav class="nav-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#case-studies">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+      </div>
+      <div class="container nav-links-mobile" id="navMobile">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#case-studies">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <div class="breadcrumb reveal">
+            <a href="../index.html#case-studies">← Back to Projects</a>
+          </div>
+
+          <h1 class="page-title reveal">AI SaaS Retention & Competitive Intelligence Platform</h1>
+          <p class="page-subtitle reveal">
+            An end-to-end analytics engineering platform that ingests 500K+ behavioral events into a layered PostgreSQL warehouse modeled with dbt Core, uncovering retention patterns across AI SaaS products and predicting long-term user churn.
+          </p>
+
+          <div class="quick-links reveal">
+            <a
+              class="case-link"
+              href="https://github.com/AnirudhHegde20/AI-Product-Retention-Analytics.git"
+              target="_blank"
+              rel="noopener"
+              >GitHub Repo</a
+            >
+            <a class="case-link" href="../index.html#contact">Contact</a>
+          </div>
+
+          <div class="callout reveal">
+            Business goal: understand why AI SaaS products lose 70% of users in month one, identify what separates long-term power users from churned ones, and surface competitive intelligence across product categories.
+          </div>
+
+          <div class="content-grid">
+            <article class="content-card reveal">
+              <h3>Problem</h3>
+              <p>
+                AI SaaS products face extreme early churn but lack visibility into which users will stick around and why. Without a structured warehouse and retention framework, product teams can't distinguish normal drop-off from fixable retention failures.
+              </p>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Approach</h3>
+              <ul>
+                <li>Ingested 500K+ Yelp behavioral events and Product Hunt API data into PostgreSQL</li>
+                <li>Built a layered warehouse (raw to staging to marts) with dbt Core</li>
+                <li>Created retention cohort and survival input fact tables</li>
+                <li>Ran Kaplan-Meier survival analysis to measure user longevity</li>
+                <li>Trained XGBoost churn prediction model on features from dbt marts</li>
+                <li>Implemented 31 automated dbt tests for data quality</li>
+                <li>Set up GitHub Actions CI/CD to run dbt build on every push</li>
+              </ul>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Results (high-level)</h3>
+              <ul>
+                <li>Discovered 70% month-1 churn rate across AI products</li>
+                <li>Found an 8x survival gap between Power Users and New Users</li>
+                <li>Identified review count and review frequency as strongest retention predictors</li>
+                <li>XGBoost model achieved 0.71 AUC-ROC for churn prediction</li>
+                <li>31 automated dbt tests catch data quality issues before they reach dashboards</li>
+              </ul>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Tech Stack</h3>
+              <ul>
+                <li>dbt Core (warehouse modeling, testing)</li>
+                <li>PostgreSQL (data warehouse)</li>
+                <li>Python, Pandas, XGBoost</li>
+                <li>Kaplan-Meier survival analysis</li>
+                <li>GitHub Actions (CI/CD pipeline)</li>
+                <li>Streamlit (interactive dashboard)</li>
+              </ul>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>Warehouse Architecture</h3>
+              <ul>
+                <li><strong>Raw layer:</strong> Immutable ingestion of Yelp JSON and Product Hunt API data</li>
+                <li><strong>Staging layer:</strong> Standardized transformations, type casting, deduplication</li>
+                <li><strong>Marts layer:</strong> Business-facing tables for retention cohorts, survival inputs, and competitive intelligence</li>
+              </ul>
+            </article>
+
+            <article class="content-card reveal">
+              <h3>What Makes This Different</h3>
+              <ul>
+                <li>Not just a notebook: full warehouse + CI/CD + automated testing</li>
+                <li>Dashboard reads directly from marts tables, not CSVs</li>
+                <li>dbt build runs on every push, preventing bad data from reaching downstream</li>
+                <li>Combines analytics engineering rigor with product analytics insights</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© <span id="year"></span> Anirudh Hegde</div>
+    </footer>
+
+    <script src="../app.js" defer></script>
+
+  </body>
+</html>
