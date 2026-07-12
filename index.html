@@ -3,24 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anirudh Hegde | Data Analyst | BI, Product Analytics & Analytics Engineering</title>
-  <meta name="description" content="Anirudh Hegde is a Data Analyst with 3+ years of experience across SaaS, automotive, and manufacturing. Skilled in SQL, Python, Power BI, PostgreSQL, dbt Core, A/B testing, funnel analysis, forecasting, KPI reporting, data modeling, and analytics engineering. MS in Data Analytics Engineering from Northeastern University." />
-  <meta name="keywords" content="Anirudh Hegde, Data Analyst, BI Analyst, Product Analyst, Analytics Engineer, SQL, Python, Power BI, PostgreSQL, dbt, A/B Testing, Funnel Analysis, Forecasting, Data Analytics Engineering" />
+
+  <title>Anirudh Hegde | Data Analyst, BI & Product Analytics</title>
+  <meta
+    name="description"
+    content="Portfolio of Anirudh Hegde, a Data Analyst with 3+ years of experience across SaaS, automotive, and manufacturing. SQL, Python, Power BI, PostgreSQL, product analytics, forecasting, experimentation, and analytics engineering."
+  />
+  <meta
+    name="keywords"
+    content="Anirudh Hegde, Data Analyst, BI Analyst, Product Analyst, SQL, Python, Power BI, PostgreSQL, dbt Core, Product Analytics, Business Intelligence, A/B Testing, Funnel Analysis"
+  />
   <meta name="author" content="Anirudh Hegde" />
+  <meta name="theme-color" content="#07111f" />
+
   <meta property="og:title" content="Anirudh Hegde | Data Analyst" />
-  <meta property="og:description" content="Portfolio of Anirudh Hegde, Data Analyst focused on BI, Product Analytics, KPI reporting, funnel analysis, forecasting, and analytics engineering." />
+  <meta
+    property="og:description"
+    content="Data analytics portfolio covering KPI frameworks, product funnels, forecasting, experimentation, BI reporting, and analytics engineering."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://anirudhhegde20.github.io" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Fallback: keep reveal sections visible even if external JS fails -->
-  <style>
-    .reveal.visible, .reveal.show { opacity: 1 !important; transform: translateY(0) !important; }
-  </style>
 
   <script type="application/ld+json">
   {
@@ -38,467 +49,578 @@
       "@type": "CollegeOrUniversity",
       "name": "Northeastern University"
     },
-    "knowsAbout": ["SQL", "Python", "Power BI", "PostgreSQL", "dbt Core", "Product Analytics", "Business Intelligence", "A/B Testing", "Funnel Analysis", "Forecasting", "Analytics Engineering"]
+    "knowsAbout": [
+      "SQL",
+      "Python",
+      "Power BI",
+      "PostgreSQL",
+      "dbt Core",
+      "Product Analytics",
+      "Business Intelligence",
+      "A/B Testing",
+      "Funnel Analysis",
+      "Forecasting"
+    ]
   }
   </script>
 </head>
 
 <body>
-<div class="page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a class="logo" href="#hero">A<span>H.</span></a>
-      <div class="nav-links">
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Anirudh Hegde home">
+        <span class="brand-mark">AH</span>
+        <span class="brand-dot">.</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
-        <a href="#story">My Journey</a>
-        <a href="#skills">Skills</a>
-        <a href="#case-studies">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
-    </div>
-    <div class="container">
-      <div class="nav-links-mobile" id="navMobile">
-        <a href="#about">About</a>
-        <a href="#story">My Journey</a>
-        <a href="#skills">Skills</a>
-        <a href="#case-studies">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <h1 class="hero-title">Anirudh Hegde</h1>
-          <p class="hero-subtitle"><span id="typed-role"></span><span class="typed-cursor">|</span></p>
-          <div class="opt-badge"><span class="opt-dot"></span>Gurugram, India · Immediately available · Open to India and Dubai/UAE opportunities</div>
-          <div class="hero-meta">
-            <span class="hero-meta-item"><span class="icon">📍</span> Gurugram, India</span>
-            <span class="hero-meta-item"><span class="icon">📧</span> <a href="mailto:anirudh.hegde07@gmail.com">anirudh.hegde07@gmail.com</a></span>
-            <span class="hero-meta-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle colour theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">◐</span>
+        </button>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal visible">
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Immediately available · Open to relocation across India
           </div>
-          <div class="hero-mini">
-            <div class="mini-card">
-              <div class="mini-title">What I Do</div>
-              <div class="mini-text">I translate business workflows into reliable <strong>KPIs, SQL models, BI dashboards, funnel analysis, forecasts, and analytics-ready reporting systems</strong>.</div>
+
+          <p class="eyebrow">DATA ANALYST · BUSINESS INTELLIGENCE · PRODUCT ANALYTICS</p>
+
+          <h1>
+            I turn complex data into
+            <span class="gradient-text">clear business decisions.</span>
+          </h1>
+
+          <p class="hero-role">
+            <span id="typedRole">Data Analyst</span><span class="typing-cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-summary">
+            Data Analyst with 3+ years of experience across SaaS, automotive, and manufacturing.
+            I build KPI frameworks, reusable data models, forecasts, dashboards, and product analyses
+            using SQL, Python, Power BI, PostgreSQL, and dbt Core.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              View case studies
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-secondary" href="./AnirudhHegde_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              View résumé
+            </a>
+          </div>
+
+          <div class="hero-links" aria-label="External links">
+            <a href="mailto:anirudh.hegde07@gmail.com">Email</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>•</span>
+            <a href="https://github.com/AnirudhHegde20" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal visible" aria-label="Professional profile and analytics illustration">
+          <div class="profile-frame">
+            <div class="profile-image-wrap">
+              <img
+                src="./headshot.jpg"
+                alt="Anirudh Hegde"
+                class="profile-image"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+              />
+              <div class="profile-fallback" style="display:none" aria-hidden="true">AH</div>
             </div>
-            <div class="mini-card">
-              <div class="mini-title">Current Focus</div>
-              <div class="mini-text">Looking for <strong>Data Analyst</strong>, <strong>BI Analyst</strong>, <strong>Product Analyst</strong>, <strong>Analytics Engineer</strong>, and <strong>Data Analytics Engineer</strong> roles.</div>
-            </div>
-          </div>
-          <div class="hero-actions" style="margin-top:1.3rem">
-            <a class="btn btn-primary" href="#case-studies"><span>See My Work</span> <span class="icon-arrow">→</span></a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-            <a class="btn btn-secondary" href="https://github.com/AnirudhHegde20" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
-            <a class="btn btn-resume" href="./AnirudhHegde_Resume.pdf" target="_blank" rel="noopener noreferrer">📄 Resume ↗</a>
-          </div>
-        </div>
-        <div class="hero-photo">
-          <img src="./headshot.jpg" alt="Anirudh Hegde" />
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">About Me</h2><div class="section-underline"></div></div>
-      <p class="about-text reveal">Data Analyst with 3+ years of experience across SaaS, automotive, and manufacturing, specializing in BI, product analytics, KPI reporting, funnel analysis, forecasting, and analytics engineering. Skilled in SQL, Python, Power BI, PostgreSQL, dbt Core, and A/B testing. I focus on translating business workflows into analytics-ready data models, executive dashboards, and insights that inform product, pricing, and operational decisions.</p>
-      <div class="about-values reveal">
-        <div class="value-card"><span class="value-icon">🧱</span><h3 class="value-title">Analytics Engineering</h3><p class="value-text">Building SQL and PostgreSQL data models, dbt transformations, marts, schema logic, and quality checks that make business reporting consistent and reusable.</p></div>
-        <div class="value-card"><span class="value-icon">📊</span><h3 class="value-title">BI & KPI Reporting</h3><p class="value-text">Creating Power BI dashboards, KPI definitions, executive reports, and performance trackers that help leadership monitor trends and make better decisions.</p></div>
-        <div class="value-card"><span class="value-icon">🧪</span><h3 class="value-title">Product Analytics</h3><p class="value-text">Analyzing funnels, cohorts, retention, churn, A/B tests, and user behavior to identify drop-offs, validate decisions, and prioritize product actions.</p></div>
-      </div>
-      <div class="about-metrics reveal">
-        <div class="metric-card"><div class="metric-value">3+ Years</div><div class="metric-label">Professional Experience</div><div class="metric-tag">SaaS · Automotive · Manufacturing</div></div>
-        <div class="metric-card"><div class="metric-value">12+</div><div class="metric-label">KPI Definitions Standardized</div><div class="metric-tag">Buyer Conversion · Response Time · Transactions</div></div>
-        <div class="metric-card"><div class="metric-value">500K+</div><div class="metric-label">Records Modeled</div><div class="metric-tag">PostgreSQL · dbt · Product Analytics</div></div>
-        <div class="metric-card"><div class="metric-value">42</div><div class="metric-label">Automated dbt Tests</div><div class="metric-tag">dbt Core · GitHub Actions · Data Quality</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRANSITION STORY -->
-  <section id="story">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">My Journey</h2><div class="section-underline"></div></div>
-      <div class="story-grid reveal">
-
-        <div class="story-card">
-          <div class="story-step">01</div>
-          <div class="story-icon">⚙️</div>
-          <h3 class="story-title">Business & Operations Foundation</h3>
-          <p class="story-text">Started in manufacturing and automotive roles at Godrej & Boyce and Maruti Suzuki, where I worked on project analytics, cost variance, competitor benchmarking, CAFE compliance analytics, forecasting, and Power BI dashboards for business planning.</p>
-          <div class="story-tag">2021 – 2023</div>
-        </div>
-
-        <div class="story-arrow">→</div>
-
-        <div class="story-card">
-          <div class="story-step">02</div>
-          <div class="story-icon">🎓</div>
-          <h3 class="story-title">Analytics Engineering Pivot</h3>
-          <p class="story-text">Completed an MS in Data Analytics Engineering at Northeastern University with a 3.92 GPA, going deeper into SQL, statistics, machine learning, data pipelines, experimentation, NLP, cloud deployment, and analytics systems.</p>
-          <div class="story-tag">2023 – 2025</div>
-        </div>
-
-        <div class="story-arrow">→</div>
-
-        <div class="story-card">
-          <div class="story-step">03</div>
-          <div class="story-icon">🚀</div>
-          <h3 class="story-title">Product & Marketplace Analytics</h3>
-          <p class="story-text">At Ipserlab, I worked on buyer conversion, vendor response time, transaction volume, marketplace funnel reviews, PostgreSQL data modeling, reusable reporting logic, and Python/SQL validation checks for leadership KPI reporting.</p>
-          <div class="story-tag">2025 – 2026</div>
-        </div>
-
-      </div>
-
-      <div class="story-highlight reveal">
-        <p>"I care about analytics that leads to action: clear metrics, reliable data models, useful dashboards, and recommendations that teams can actually use."</p>
-      </div>
-
-      <div class="section-subheader reveal"><h3 class="section-subtitle">How I Work</h3></div>
-      <div class="leadership-grid reveal">
-        <div class="leadership-card">
-          <div class="leadership-icon">🎯</div>
-          <h4>Start with the decision</h4>
-          <p>I define the business question first, then build the KPI, dashboard, model, or analysis needed to support that decision.</p>
-        </div>
-        <div class="leadership-card">
-          <div class="leadership-icon">🧪</div>
-          <h4>Validate before reporting</h4>
-          <p>I use SQL and Python checks for nulls, joins, duplicates, freshness, and schema logic so teams can trust the numbers.</p>
-        </div>
-        <div class="leadership-card">
-          <div class="leadership-icon">📈</div>
-          <h4>Make insights actionable</h4>
-          <p>I translate funnel drops, forecast variances, and operational signals into clear next steps for product, operations, and leadership teams.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">Technical Stack</h2><div class="section-underline"></div></div>
-      <div class="skills-grid reveal">
-
-        <div class="skill-block">
-          <div class="skill-heading">🧱 SQL & Databases</div>
-          <div class="skill-chips">
-            <span class="chip">SQL</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">CTEs</span>
-            <span class="chip">Window Functions</span>
-            <span class="chip">Data Modeling</span>
-            <span class="chip">Schema Design</span>
-            <span class="chip">Data Quality Testing</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-heading">📊 BI & Reporting</div>
-          <div class="skill-chips">
-            <span class="chip">Power BI</span>
-            <span class="chip">Tableau</span>
-            <span class="chip">DAX</span>
-            <span class="chip">Business Intelligence</span>
-            <span class="chip">KPI Reporting</span>
-            <span class="chip">Executive Dashboards</span>
-            <span class="chip">Stakeholder Reporting</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-heading">🧪 Analytics</div>
-          <div class="skill-chips">
-            <span class="chip">A/B Testing</span>
-            <span class="chip">Hypothesis Testing</span>
-            <span class="chip">Funnel Analysis</span>
-            <span class="chip">Cohort Analysis</span>
-            <span class="chip">Retention Analysis</span>
-            <span class="chip">Churn Modeling</span>
-            <span class="chip">Forecasting</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-heading">🐍 Python & Data Science</div>
-          <div class="skill-chips">
-            <span class="chip">Python</span>
-            <span class="chip">Pandas</span>
-            <span class="chip">NumPy</span>
-            <span class="chip">SciPy</span>
-            <span class="chip">Scikit-learn</span>
-            <span class="chip">XGBoost</span>
-            <span class="chip">NLP</span>
-            <span class="chip">mBERT</span>
-            <span class="chip">XLM-RoBERTa</span>
-            <span class="chip">Model Evaluation</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-heading">⚙️ Data Stack & Automation</div>
-          <div class="skill-chips">
-            <span class="chip">dbt Core</span>
-            <span class="chip">Airflow</span>
-            <span class="chip">Docker</span>
-            <span class="chip">GitHub Actions</span>
-            <span class="chip">CI/CD</span>
-            <span class="chip">ETL/ELT</span>
-            <span class="chip">GCP</span>
-            <span class="chip">BigQuery</span>
-            <span class="chip">Vertex AI</span>
-            <span class="chip">Cloud Run</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES -->
-  <section id="case-studies">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">Projects</h2><div class="section-underline"></div></div>
-      <div class="case-filter reveal">
-        <button class="case-pill active" data-filter="all">All</button>
-        <button class="case-pill" data-filter="ae">Analytics Engineering</button>
-        <button class="case-pill" data-filter="analytics">Product Analytics</button>
-        <button class="case-pill" data-filter="mlops">Data Pipeline / NLP</button>
-      </div>
-      <div class="case-grid reveal">
-
-        <!-- PROJECT 1: SaaS Churn & Retention -->
-        <div class="case-card" data-type="ae" data-search="saas churn retention analytics pipeline dbt postgresql xgboost survival analysis product hunt streamlit github actions">
-          <span class="case-tag">Analytics Engineering</span>
-          <div><div class="case-label">Business Problem</div><h3 class="case-title">SaaS Churn & Retention Analytics Pipeline</h3><p class="case-text">SaaS teams need to understand where users drop off, which behaviors predict retention, and whether the metrics layer behind dashboards is reliable enough for product decisions.</p></div>
-          <div><div class="case-label">What I Built</div><p class="case-text">Built an end-to-end analytics engineering pipeline ingesting 500K+ engagement records and Product Hunt API data into a layered PostgreSQL warehouse using dbt Core, with raw, staging, and marts models validated by automated tests in CI.</p></div>
-          <div><div class="case-label">Key Decisions & Challenges</div><p class="case-text">Used dbt Core to replace one-off analysis logic with reusable models and added 42 dbt and dbt-expectations tests through GitHub Actions to catch data quality issues before they reached reporting.</p></div>
-          <div><div class="case-label">Outcome</div><p class="case-text">Modeled retention using Kaplan-Meier survival analysis and an XGBoost churn model with 0.71 AUC-ROC, identifying a 70% month-1 churn cliff, 8x longer retention for Power Users, and engagement frequency as the top churn driver.</p></div>
-          <div class="case-metrics">
-            <div class="case-metric"><span class="case-metric-label">Data</span><span class="case-metric-value">500K+ records</span></div>
-            <div class="case-metric"><span class="case-metric-label">Churn Signal</span><span class="case-metric-value">70% month-1</span></div>
-            <div class="case-metric"><span class="case-metric-label">Tests</span><span class="case-metric-value">42 automated</span></div>
-            <div class="case-metric"><span class="case-metric-label">Model</span><span class="case-metric-value">0.71 AUC</span></div>
-          </div>
-          <div class="case-footer"><span>dbt Core · PostgreSQL · Python · XGBoost · Streamlit · GitHub Actions</span><div class="case-links"><a class="case-link" href="https://github.com/AnirudhHegde20/AI-Product-Retention-Analytics" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
-        </div>
-
-        <!-- PROJECT 2: E-commerce A/B Test -->
-        <div class="case-card" data-type="analytics" data-search="ecommerce conversion optimization ab testing chi-square fisher confidence intervals funnel analysis python scipy statsmodels streamlit">
-          <span class="case-tag">Product Analytics</span>
-          <div><div class="case-label">Business Problem</div><h3 class="case-title">E-commerce Conversion Optimization</h3><p class="case-text">A product team wants to know whether a new product-page experience should be rolled out based on conversion behavior across view, cart, and purchase stages.</p></div>
-          <div><div class="case-label">What I Built</div><p class="case-text">Built an end-to-end A/B test analysis for a 2,000-user product-page experiment, combining Chi-Square testing, Fisher's Exact segment tests, 95% confidence intervals, and funnel analysis across view, cart, and purchase stages.</p></div>
-          <div><div class="case-label">Key Decisions & Challenges</div><p class="case-text">Separated the aggregate test from segment-level diagnostics to avoid overreacting to small segment signals while still flagging risk areas for validation.</p></div>
-          <div><div class="case-label">Outcome</div><p class="case-text">Found no significant overall lift from Treatment B, with conversion moving from 7.5% to 8.8% and p=0.33. Recommended against full rollout while treating Europe + Tablet underperformance as an exploratory signal due to small segment size and multiple-comparison risk.</p></div>
-          <div class="case-metrics">
-            <div class="case-metric"><span class="case-metric-label">Users</span><span class="case-metric-value">2,000</span></div>
-            <div class="case-metric"><span class="case-metric-label">Control</span><span class="case-metric-value">7.5%</span></div>
-            <div class="case-metric"><span class="case-metric-label">Treatment</span><span class="case-metric-value">8.8%</span></div>
-            <div class="case-metric"><span class="case-metric-label">Decision</span><span class="case-metric-value">Do not rollout</span></div>
-          </div>
-          <div class="case-footer"><span>Python · Pandas · SciPy · Statsmodels · Streamlit · A/B Testing</span><div class="case-links"><a class="case-link" href="https://github.com/AnirudhHegde20/Improving-Conversion-on-an-E-commerce-Product-Page" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
-        </div>
-
-        <!-- PROJECT 3: Bilingual Complaint -->
-        <div class="case-card" data-type="mlops" data-search="automated bilingual complaint classification python airflow docker gcp vertex ai bigquery mbert xlm roberta nlp github actions">
-          <span class="case-tag">Data Pipeline / NLP</span>
-          <div><div class="case-label">Business Problem</div><h3 class="case-title">Automated Bilingual Complaint Classification System</h3><p class="case-text">Complaint routing can be slow and inconsistent when customer issues arrive across languages and need to be classified for product and department-level routing.</p></div>
-          <div><div class="case-label">What I Built</div><p class="case-text">Built an Airflow preprocessing pipeline for CFPB complaint data, handling English/Hindi language filtering, schema validation, PII anonymization, abusive-content filtering, and BigQuery loading.</p></div>
-          <div><div class="case-label">Key Decisions & Challenges</div><p class="case-text">Fine-tuned mBERT and XLM-RoBERTa models for product and department routing, then connected the workflow to Vertex AI deployment, fairness checks, drift monitoring, and CI/CD automation.</p></div>
-          <div><div class="case-label">Outcome</div><p class="case-text">Achieved 0.69 F1 on product classification and built the supporting pipeline components needed for reliable preprocessing, model deployment, validation, and monitoring.</p></div>
-          <div class="case-metrics">
-            <div class="case-metric"><span class="case-metric-label">Pipeline</span><span class="case-metric-value">Airflow</span></div>
-            <div class="case-metric"><span class="case-metric-label">F1 Score</span><span class="case-metric-value">0.69</span></div>
-            <div class="case-metric"><span class="case-metric-label">Languages</span><span class="case-metric-value">English + Hindi</span></div>
-            <div class="case-metric"><span class="case-metric-label">Cloud</span><span class="case-metric-value">GCP</span></div>
-          </div>
-          <div class="case-footer"><span>Python · Airflow · Docker · GCP · Vertex AI · BigQuery · mBERT · GitHub Actions</span><div class="case-links"><a class="case-link" href="https://github.com/AnirudhHegde20/Automated-BiLingual-Complaint-System" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">Experience</h2><div class="section-underline"></div></div>
-      <div class="exp-timeline reveal">
-
-        <div class="exp-card">
-          <div class="exp-role">Data Analyst</div>
-          <div class="exp-meta">Ipserlab LLC · USA · Jul 2025 – May 2026</div>
-          <ul class="exp-list">
-            <li>Standardized 12+ KPI definitions for buyer conversion, vendor response time, and transaction volume, creating a SQL-based single source of truth that informed 2 product roadmap changes and 1 pricing revision</li>
-            <li>Led weekly funnel reviews with Product and Operations teams, analyzing buyer requests, vendor matching, quote submission, and transaction flow to convert drop-off patterns into prioritized actions</li>
-            <li>Built a PostgreSQL marketplace data model across 10+ tables covering buyers, vendors, listings, quotes, and transactions, replacing ad hoc queries with reusable reporting logic that improved consistency across funnel, conversion, and revenue analysis</li>
-            <li>Implemented 15+ Python and SQL validation checks for null detection, join integrity, duplicate records, and data freshness, catching upstream data issues before weekly leadership KPI reviews</li>
-          </ul>
-          <div class="exp-tags"><span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">Product Analytics</span><span class="chip">Funnel Analysis</span><span class="chip">Data Quality</span></div>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-role">Assistant Manager, Powertrain Planning Analytics</div>
-          <div class="exp-meta">Maruti Suzuki India Limited · India · Jun 2022 – Jul 2023</div>
-          <ul class="exp-list">
-            <li>Benchmarked 8 powertrain variants against 240+ competitor models across 10+ OEMs, synthesizing fuel-efficiency, pricing, technology, and regulatory trends into a data-backed roadmap adopted by senior leadership</li>
-            <li>Owned CAFE compliance analytics for the full vehicle fleet, modeling engine-wise fuel-efficiency projections, sales-mix scenarios, and emissions impact to identify optimization opportunities and support a 10% improvement in projected fuel-efficiency targets</li>
-            <li>Developed engine-wise sales and carbon-emission forecasts through 2027 and built a Power BI dashboard tracking weekly actuals against projections, enabling leadership to monitor compliance gaps and adjust powertrain strategy</li>
-            <li>Led weekly KPI reporting and planning reviews across powertrain, sales, and strategy stakeholders, analyzing forecast variances, competitor movements, and sales-mix trends to recommend product planning actions</li>
-          </ul>
-          <div class="exp-tags"><span class="chip">Power BI</span><span class="chip">Forecasting</span><span class="chip">KPI Reporting</span><span class="chip">Competitive Benchmarking</span><span class="chip">CAFE Analytics</span></div>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-role">Assistant Manager, Project & Business Analytics</div>
-          <div class="exp-meta">Godrej & Boyce Mfg Co Ltd · India · Jan 2021 – Jun 2022</div>
-          <ul class="exp-list">
-            <li>Analyzed performance across up to 4 concurrent government B2B contracts, tracking cost variance, timeline adherence, resource utilization, and delivery risk to identify at-risk projects earlier</li>
-            <li>Delivered a weekly Power BI project health dashboard consolidating delivery timelines, site issues, procurement status, and financial variance, replacing manual reporting with a centralized view for senior management</li>
-            <li>Performed root-cause analysis on project cost overruns, tracing variance to supplier delays, procurement gaps, and reporting issues; supported operational fixes that reduced overruns by 15%</li>
-            <li>Quantified revenue concentration across 40+ client accounts, identifying that the top 5 accounts contributed 60% of revenue and informing retention prioritization and resource allocation</li>
-          </ul>
-          <div class="exp-tags"><span class="chip">Power BI</span><span class="chip">Project Analytics</span><span class="chip">Cost Variance</span><span class="chip">Root-Cause Analysis</span><span class="chip">Stakeholder Reporting</span></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">Education</h2><div class="section-underline"></div></div>
-      <div class="edu-list reveal">
-        <div class="edu-card">
-          <div class="edu-title">Master of Science in Data Analytics Engineering</div>
-          <div class="edu-meta">Northeastern University · Boston, Massachusetts · May 2025</div>
-          <div class="edu-detail">GPA: 3.92 / 4.00</div>
-          <div class="edu-coursework">
-            <div class="edu-course-label">Relevant Focus Areas</div>
-            <div class="edu-courses">
-              <span class="chip">Data Analytics Engineering</span>
-              <span class="chip">Machine Learning</span>
-              <span class="chip">MLOps</span>
-              <span class="chip">Natural Language Processing</span>
-              <span class="chip">Data Mining</span>
-              <span class="chip">Statistical Modeling</span>
-              <span class="chip">Data Management for Analytics</span>
-              <span class="chip">Computational Statistics</span>
+            <div class="profile-info">
+              <strong>Anirudh Hegde</strong>
+              <span>Gurugram, India</span>
             </div>
           </div>
-        </div>
-        <div class="edu-card">
-          <div class="edu-title">Bachelor of Technology in Mechanical and Automation Engineering</div>
-          <div class="edu-meta">Guru Gobind Singh Indraprastha University · New Delhi, India · Sept 2020</div>
-          <div class="edu-coursework">
-            <div class="edu-course-label">Relevant Focus Areas</div>
-            <div class="edu-courses">
-              <span class="chip">Operations Research</span>
-              <span class="chip">Optimization Techniques</span>
-              <span class="chip">Numerical Analysis</span>
-              <span class="chip">Statistical Techniques</span>
+
+          <div class="analytics-window">
+            <div class="window-top">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>decision_dashboard.sql</span>
+            </div>
+
+            <div class="chart-header">
+              <div>
+                <span class="chart-label">ANALYTICS IMPACT</span>
+                <strong>From data to action</strong>
+              </div>
+              <span class="chart-status">LIVE</span>
+            </div>
+
+            <div class="chart-area" aria-hidden="true">
+              <svg viewBox="0 0 520 190" role="img">
+                <defs>
+                  <linearGradient id="lineGradient" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#38bdf8"/>
+                    <stop offset="100%" stop-color="#8b5cf6"/>
+                  </linearGradient>
+                  <linearGradient id="fillGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#38bdf8" stop-opacity=".32"/>
+                    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g class="chart-grid">
+                  <line x1="20" y1="30" x2="500" y2="30"/>
+                  <line x1="20" y1="75" x2="500" y2="75"/>
+                  <line x1="20" y1="120" x2="500" y2="120"/>
+                  <line x1="20" y1="165" x2="500" y2="165"/>
+                </g>
+                <path class="chart-fill" d="M20 150 C85 142, 95 124, 145 128 S225 115, 260 98 S330 105, 365 72 S440 55, 500 30 L500 180 L20 180 Z"/>
+                <path class="chart-line" d="M20 150 C85 142, 95 124, 145 128 S225 115, 260 98 S330 105, 365 72 S440 55, 500 30"/>
+                <g class="chart-points">
+                  <circle cx="20" cy="150" r="5"/>
+                  <circle cx="145" cy="128" r="5"/>
+                  <circle cx="260" cy="98" r="5"/>
+                  <circle cx="365" cy="72" r="5"/>
+                  <circle cx="500" cy="30" r="5"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="chart-kpis">
+              <div><strong>12+</strong><span>KPIs standardised</span></div>
+              <div><strong>10+</strong><span>Tables modelled</span></div>
+              <div><strong>15+</strong><span>Quality checks</span></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-header reveal"><h2 class="section-title">Get in Touch</h2><div class="section-underline"></div></div>
-      <div class="contact-wrapper reveal">
-        <div class="contact-card">
-          <p class="contact-subtitle">Looking for a Data Analyst, BI Analyst, Product Analyst, Analytics Engineer, or Data Analytics Engineer? I am based in Gurugram, immediately available, and open to analytics opportunities across India and Dubai/UAE. Reach out by email or connect with me on LinkedIn.</p>
-          <div class="field"><label for="c-name">Name</label><input id="c-name" type="text" placeholder="Your name" /></div>
-          <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" placeholder="you@email.com" /></div>
-          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" placeholder="Your message…"></textarea></div>
-          <button class="btn btn-primary" onclick="handleContact()" style="width:100%;justify-content:center">Send Email</button>
-          <p id="contact-ok" style="display:none;margin-top:.8rem;color:#0f7b5f;font-size:.88rem;font-weight:500">Your email client should open with a pre-filled message.</p>
-          <div class="contact-footer"><span>Prefer direct contact?</span><div class="social-links"><a href="mailto:anirudh.hegde07@gmail.com" title="Email">📧</a><a href="https://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener noreferrer" title="LinkedIn">🔗</a><a href="https://github.com/AnirudhHegde20" target="_blank" rel="noopener noreferrer" title="GitHub">💻</a></div></div>
-          <div class="linkedin-badge-wrapper">
-            <div class="badge-base LI-profile-badge"
-                 data-locale="en_US"
-                 data-size="medium"
-                 data-theme="dark"
-                 data-type="HORIZONTAL"
-                 data-vanity="anirudhhegde1997"
-                 data-version="v1">
-              <a class="badge-base__link LI-simple-link"
-                 href="https://in.linkedin.com/in/anirudhhegde1997?trk=profile-badge">
-                 Anirudh Hegde
-              </a>
-            </div>
-          </div>
+    <!-- IMPACT STRIP -->
+    <section class="impact-strip" aria-label="Selected professional impact">
+      <div class="container impact-grid">
+        <article class="impact-item reveal">
+          <span class="impact-number" data-count="12" data-suffix="+">12+</span>
+          <span>Marketplace KPIs standardised</span>
+        </article>
+        <article class="impact-item reveal">
+          <span class="impact-number" data-count="240" data-suffix="+">240+</span>
+          <span>Competitor models benchmarked</span>
+        </article>
+        <article class="impact-item reveal">
+          <span class="impact-number" data-count="500" data-suffix="K+">500K+</span>
+          <span>Engagement records analysed</span>
+        </article>
+        <article class="impact-item reveal">
+          <span class="impact-number" data-count="15" data-suffix="%">15%</span>
+          <span>Reduction in project cost overruns</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-light" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ABOUT</p>
+          <h2>Analytics that supports a decision, not just a dashboard.</h2>
+          <p>
+            My experience combines business context, statistical reasoning, data modelling, and stakeholder communication.
+            I work backwards from the decision a team needs to make, then build the smallest reliable analysis needed to answer it.
+          </p>
+        </div>
+
+        <div class="principles-grid">
+          <article class="principle-card reveal">
+            <span class="card-index">01</span>
+            <h3>Define the metric</h3>
+            <p>Turn ambiguous business language into clear KPI definitions, grains, filters, and reusable reporting logic.</p>
+          </article>
+
+          <article class="principle-card reveal">
+            <span class="card-index">02</span>
+            <h3>Validate the data</h3>
+            <p>Use SQL, Python, and dbt tests to catch nulls, duplicates, broken joins, stale data, and schema issues.</p>
+          </article>
+
+          <article class="principle-card reveal">
+            <span class="card-index">03</span>
+            <h3>Explain the decision</h3>
+            <p>Translate funnel drops, forecast variances, experiment results, and operating signals into concrete next steps.</p>
+          </article>
         </div>
       </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <div class="section-heading section-heading-dark reveal">
+          <p class="eyebrow">FEATURED WORK</p>
+          <h2>Case studies built around real business questions.</h2>
+          <p>
+            Each project begins with a decision, uses the appropriate analytical method, and ends with a recommendation.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="./assets/project-saas-retention.png" alt="SaaS churn and retention analytics project overview" />
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">01</span>
+                <span class="project-category">Product Analytics · Analytics Engineering</span>
+              </div>
+              <h3>SaaS Churn & Retention Analytics Pipeline</h3>
+              <p class="project-question">Which user behaviours predict early churn, and which segments retain longest?</p>
+
+              <div class="project-evidence">
+                <span>500K+ records</span>
+                <span>42 automated tests</span>
+                <span>0.71 AUC-ROC</span>
+                <span>70% month-1 churn cliff</span>
+              </div>
+
+              <p>
+                Built a PostgreSQL and dbt analytics pipeline with layered raw, staging, and marts models.
+                Applied Kaplan-Meier survival analysis and XGBoost to identify the largest retention risks and the behaviours associated with longer product usage.
+              </p>
+
+              <div class="project-decision">
+                <strong>Recommendation:</strong>
+                Prioritise month-one activation and recurring engagement because engagement frequency was the strongest churn driver.
+              </div>
+
+              <div class="project-footer">
+                <span>PostgreSQL · dbt Core · Python · XGBoost · Streamlit · GitHub Actions</span>
+                <a href="https://github.com/AnirudhHegde20/AI-Product-Retention-Analytics" target="_blank" rel="noopener noreferrer">
+                  View repository ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card-reverse reveal">
+            <div class="project-media">
+              <img src="./assets/project-ecommerce-ab-test.png" alt="E-commerce A/B test and conversion analytics project overview" />
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">02</span>
+                <span class="project-category">Experimentation · Conversion Analytics</span>
+              </div>
+              <h3>E-commerce Conversion Optimization</h3>
+              <p class="project-question">Should a redesigned product page be rolled out?</p>
+
+              <div class="project-evidence">
+                <span>2,000 users</span>
+                <span>7.5% → 8.8%</span>
+                <span>p = 0.33</span>
+                <span>No full rollout</span>
+              </div>
+
+              <p>
+                Evaluated the complete view-to-cart-to-purchase journey using Chi-square testing, Fisher’s exact tests,
+                confidence intervals, and segment diagnostics. Separated the overall experiment result from exploratory segment findings.
+              </p>
+
+              <div class="project-decision">
+                <strong>Recommendation:</strong>
+                Do not roll out Treatment B because the observed lift was not statistically significant. Validate the Europe + Tablet signal with a larger targeted experiment.
+              </div>
+
+              <div class="project-footer">
+                <span>Python · Pandas · SciPy · Statsmodels · Streamlit</span>
+                <a href="https://github.com/AnirudhHegde20/Improving-Conversion-on-an-E-commerce-Product-Page" target="_blank" rel="noopener noreferrer">
+                  View repository ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="./assets/project-bilingual-nlp.png" alt="Bilingual complaint classification system project overview" />
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">03</span>
+                <span class="project-category">Data Pipeline · NLP · MLOps</span>
+              </div>
+              <h3>Bilingual Complaint Classification System</h3>
+              <p class="project-question">How can English and Hindi complaints be routed automatically?</p>
+
+              <div class="project-evidence">
+                <span>English + Hindi</span>
+                <span>0.69 F1</span>
+                <span>Airflow pipeline</span>
+                <span>Vertex AI deployment</span>
+              </div>
+
+              <p>
+                Built an Airflow preprocessing workflow covering language filtering, schema checks, PII anonymisation,
+                abusive-content filtering, and BigQuery loading. Fine-tuned multilingual transformer models and added deployment and monitoring components.
+              </p>
+
+              <div class="project-decision">
+                <strong>Outcome:</strong>
+                Delivered an end-to-end classification workflow that supports multilingual routing, reproducible preprocessing, model validation, and cloud deployment.
+              </div>
+
+              <div class="project-footer">
+                <span>Python · Airflow · BigQuery · Vertex AI · mBERT · XLM-RoBERTa</span>
+                <a href="https://github.com/AnirudhHegde20/Automated-BiLingual-Complaint-System" target="_blank" rel="noopener noreferrer">
+                  View repository ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-light" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">EXPERIENCE</p>
+          <h2>Three industries. One consistent approach to analytics.</h2>
+          <p>
+            I have worked with product, operations, strategy, procurement, and leadership teams across SaaS, automotive, and manufacturing.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span>Jul 2025 – Apr 2026</span>
+              <span>Boston, USA</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-heading">
+                <div>
+                  <h3>Data Analyst</h3>
+                  <p>Ipserlab LLC</p>
+                </div>
+                <span class="company-tag">SaaS Marketplace</span>
+              </div>
+              <ul>
+                <li>Standardised 12+ marketplace KPIs and created a SQL-based source of truth that informed 2 product-roadmap changes and 1 pricing revision.</li>
+                <li>Analysed the end-to-end buyer funnel to identify stage-level drop-offs and prioritise workflow improvements with Product and Operations.</li>
+                <li>Designed a reusable PostgreSQL marketplace model across 10+ tables for funnel, conversion, and revenue reporting.</li>
+                <li>Implemented 15+ Python and SQL quality checks covering nulls, duplicates, referential integrity, and freshness.</li>
+              </ul>
+              <div class="tag-row">
+                <span>SQL</span><span>PostgreSQL</span><span>Product Analytics</span><span>Funnel Analysis</span><span>Data Quality</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span>Jun 2022 – Jul 2023</span>
+              <span>India</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-heading">
+                <div>
+                  <h3>Assistant Manager, Powertrain Planning (Analytics)</h3>
+                  <p>Maruti Suzuki India Limited</p>
+                </div>
+                <span class="company-tag">Automotive</span>
+              </div>
+              <ul>
+                <li>Benchmarked 8 powertrain variants against 240+ competitor models across 10+ OEMs for senior product-planning decisions.</li>
+                <li>Modelled fleet fuel-efficiency, sales-mix, and emissions scenarios that supported a 10% improvement in projected fuel-efficiency targets.</li>
+                <li>Developed sales and carbon-emission forecasts through 2027 and built a Power BI actual-vs-plan dashboard.</li>
+                <li>Translated forecast variances, competitor movements, and sales-mix shifts into weekly product-planning recommendations.</li>
+              </ul>
+              <div class="tag-row">
+                <span>Power BI</span><span>Forecasting</span><span>Compliance Analytics</span><span>Benchmarking</span><span>Strategy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span>Jan 2021 – Jun 2022</span>
+              <span>India</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-heading">
+                <div>
+                  <h3>Assistant Manager, Project Management (Analytics)</h3>
+                  <p>Godrej & Boyce Mfg. Co. Ltd.</p>
+                </div>
+                <span class="company-tag">Manufacturing</span>
+              </div>
+              <ul>
+                <li>Built a weekly Power BI project-health dashboard across 4 government contracts covering cost, timelines, procurement, and delivery risk.</li>
+                <li>Supported a 15% reduction in project cost overruns by tracing variance to supplier delays, procurement gaps, and reporting issues.</li>
+                <li>Analysed revenue concentration across 40+ client accounts and identified the top 5 as 60% of revenue.</li>
+              </ul>
+              <div class="tag-row">
+                <span>Power BI</span><span>Project Analytics</span><span>Root-Cause Analysis</span><span>Cost Variance</span><span>Reporting</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-soft" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">CAPABILITIES</p>
+          <h2>A practical analytics stack from raw data to recommendation.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-icon">01</span>
+            <h3>SQL & Data Modelling</h3>
+            <p>SQL, PostgreSQL, CTEs, window functions, dimensional modelling, schema design, data-quality testing</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">02</span>
+            <h3>BI & Reporting</h3>
+            <p>Power BI, DAX, Power Query, Tableau, Advanced Excel, KPI reporting, executive dashboards, data visualisation</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">03</span>
+            <h3>Product Analytics</h3>
+            <p>Funnel analysis, cohort analysis, retention, churn, A/B testing, hypothesis testing, conversion analysis</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">04</span>
+            <h3>Python & Statistics</h3>
+            <p>Python, Pandas, NumPy, SciPy, scikit-learn, XGBoost, forecasting, survival analysis, model evaluation</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">05</span>
+            <h3>Data Engineering</h3>
+            <p>dbt Core, Airflow, ETL/ELT, Docker, GitHub Actions, CI/CD, BigQuery, GCP</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">06</span>
+            <h3>Business Partnership</h3>
+            <p>Requirements gathering, stakeholder reporting, root-cause analysis, data storytelling, executive communication</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-light" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">EDUCATION</p>
+          <h2>Analytics engineering grounded in business and operations.</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <div class="education-year">2025</div>
+            <div>
+              <h3>Master of Science in Data Analytics Engineering</h3>
+              <p>Northeastern University · Boston, Massachusetts</p>
+              <strong>GPA: 3.92 / 4.00</strong>
+            </div>
+          </article>
+
+          <article class="education-card reveal">
+            <div class="education-year">2020</div>
+            <div>
+              <h3>Bachelor of Technology in Mechanical and Automation Engineering</h3>
+              <p>Guru Gobind Singh Indraprastha University · New Delhi, India</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">CONTACT</p>
+          <h2>Looking for an analyst who connects data to business decisions?</h2>
+          <p>
+            I am immediately available and open to Data Analyst, BI Analyst, Product Analyst, and Analytics Engineer opportunities across India.
+          </p>
+        </div>
+
+        <div class="contact-panel reveal">
+          <a class="contact-row" href="mailto:anirudh.hegde07@gmail.com">
+            <span>
+              <small>Email</small>
+              <strong>anirudh.hegde07@gmail.com</strong>
+            </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-row" href="https://www.linkedin.com/in/anirudhhegde1997/" target="_blank" rel="noopener noreferrer">
+            <span>
+              <small>LinkedIn</small>
+              <strong>linkedin.com/in/anirudhhegde1997</strong>
+            </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-row" href="https://github.com/AnirudhHegde20" target="_blank" rel="noopener noreferrer">
+            <span>
+              <small>GitHub</small>
+              <strong>github.com/AnirudhHegde20</strong>
+            </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Anirudh Hegde</span>
+      <a href="#top">Back to top ↑</a>
     </div>
-  </section>
+  </footer>
 
-  <footer><div class="container">&copy; <span id="year">2026</span> Anirudh Hegde. Built for analytics teams, hiring managers, and recruiters.</div></footer>
-</div>
-
-<script>
-var roles=['Data Analyst','BI Analyst','Product Analyst','Analytics Engineer','Data Analytics Engineer'],ri=0,ci=0,del=false,el=document.getElementById('typed-role');
-function tl(){if(!el){return;}var w=roles[ri];if(!del){el.textContent=w.slice(0,ci+1);ci++;if(ci===w.length){del=true;setTimeout(tl,1800);return;}setTimeout(tl,90);}else{el.textContent=w.slice(0,ci-1);ci--;if(ci===0){del=false;ri=(ri+1)%roles.length;setTimeout(tl,400);return;}setTimeout(tl,50);}}
-tl();
-
-function handleContact(){
-  var name=document.getElementById('c-name').value.trim();
-  var email=document.getElementById('c-email').value.trim();
-  var msg=document.getElementById('c-msg').value.trim();
-  var subject=encodeURIComponent('Portfolio inquiry for Anirudh Hegde');
-  var body=encodeURIComponent('Hi Anirudh,\n\n' + (msg || 'I came across your portfolio and wanted to connect.') + '\n\n' + (name ? 'Name: '+name+'\n' : '') + (email ? 'Email: '+email+'\n' : ''));
-  window.location.href='mailto:anirudh.hegde07@gmail.com?subject='+subject+'&body='+body;
-  var ok=document.getElementById('contact-ok');
-  if(ok){ok.style.display='block';}
-}
-
-document.getElementById('year').textContent=new Date().getFullYear();
-
-var navToggle=document.getElementById('navToggle');
-var navMobile=document.getElementById('navMobile');
-if(navToggle && navMobile){navToggle.addEventListener('click',function(){navMobile.classList.toggle('open');});}
-
-document.querySelectorAll('.case-pill').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var filter=btn.getAttribute('data-filter');
-    document.querySelectorAll('.case-pill').forEach(function(b){b.classList.remove('active');});
-    btn.classList.add('active');
-    document.querySelectorAll('.case-card').forEach(function(card){
-      var show=filter==='all' || card.getAttribute('data-type')===filter;
-      card.style.display=show?'flex':'none';
-    });
-  });
-});
-
-var revealEls=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
-  var observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});
-  },{threshold:0.12});
-  revealEls.forEach(function(el){observer.observe(el);});
-}else{revealEls.forEach(function(el){el.classList.add('visible');});}
-</script>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script src="script.js"></script>
 </body>
 </html>
